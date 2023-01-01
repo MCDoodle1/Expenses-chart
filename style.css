@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+    /* Font families. */
+    --fontfamily-primary: 'DM Sans', sans-serif;
+
+    /* Colour scheme */
+    --color-brand: hsl(10, 79%, 65%);
+    --color-variant: hsl(186, 34%, 60%);
+
+    --color-neutral-dark: hsl(25, 47%, 15%);
+    --color-neutral-medium: hsl(28, 10%, 53%);
+    --color-neutral-light: hsl(33, 100%, 98%);
+    --color-neutral-background: hsl(27, 66%, 92%);
+
+    /* Font sizes. */
+    --fontsize-xxs: 0.500rem; /* 8 px */
+    --fontsize-xms: 0.600rem; /* 10 px */
+    --fontsize-xs: 0.750rem; /* 12 px */
+    --fontsize-s: 0.875rem;  /* 14 px */
+    --fontsize-m: 1rem;      /* 16 px */
+    --fontsize-l: 1.125rem;  /* 18 px */
+    --fontsize-xl: 1.25rem;  /* 20 px */
+    --fontsize-xxl: 1.5rem;  /* 24 px */
+    --fontsize-xxxl: 2rem;   /* 32 px */
+    --fontsize-4xl: 3rem;    /* 48 px */
+    --fontsize-5xl: 4rem;    /* 64 px */
+    --fontsize-6xl: 5rem;    /* 80 px */
+    --fontsize-7xl: 6rem;    /* 96 px */
+    --fontsize-8xl: 7rem;   /* 112 px */
+    --fontsize-9xl: 8rem;   /* 128 px */
+    --fontsize-10xl: 9rem;  /* 144 px */
+    --fontsize-11xl: 10rem; /* 160 px */
+
+    /* Font weights */
+    --fontweight-s: 200;
+    --fontweight-m: 400;
+    --fontweight-l: 700;
+    
+    /* Line heights. */
+    --line-height-s: 1.25;
+    --line-height-m: 1.5;
+    --line-height-l: 2;
+
+    /* Letter spacings. */
+    --letter-spacing-s: 0.05em;
+    --letter-spacing-m: 0.1em;
+    --letter-spacing-l: 0.2em;
+
+    /* Border radius */
+    --border-radius: 0.5rem;
+    --border-radius-bars: 0.2rem;
+    --border-radius-circle: 50%;
+
+    /* Borders */
+    --border-m: 0.125rem;
+
+    /* Circles */
+    --circle-radius: 2.5rem;
+
+    /* Height chart bars */
+    --barheight: 35vh;
+
+    /* Margins */
+    --blockmargin: 2vh;
+
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {    
+    font-family: var(--fontfamily-primary);
+    background: var(--color-neutral-background);
+}
+
+main {
+    min-width: 375px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+hr {
+    height: 0.25vh;
+    background-color: var(--color-neutral-background);
+    border: none;
+    margin: 1.5rem 0.75rem 0.75rem 0.75rem;
+}
+
+.top-block {
+    display: flex;
+    width: 90%;
+    height: 10vh;
+    margin: 10vh auto 3vh;
+    border-radius: var(--border-radius);
+    background-color: var(--color-brand);
+}
+
+.bottom-block {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    border-radius: var(--border-radius);
+    background-color: var(--color-neutral-light);
+}
+
+/* First block */
+
+.balance-container {
+    flex: 50%;
+    position: relative;
+    align-self: center;
+    margin: 1vh;
+}
+
+.balance-container h2, h4 {
+    position: relative;
+    left: 1rem;     
+}
+
+.balance-container h4 {
+    font-weight: var(--fontweight-s);
+}
+
+.circles-container {
+    display: flex;
+    align-items: center;
+    margin: 1vh;
+}
+
+.logo {
+    position: relative;
+    align-self: center;
+}
+
+.circle{
+    position: absolute;
+    background-color: var(--color-neutral-dark);
+    width: var(--circle-radius);
+    height: var(--circle-radius);
+    border-radius: var(--border-radius-circle); 
+    right: 1rem;
+}
+
+.ring {
+    position: absolute;
+    width: var(--circle-radius);
+    height: var(--circle-radius);
+    border: var(--border-m) solid var(--color-neutral-light);
+    background-color: transparent;
+    border-radius: var(--border-radius-circle); 
+    right: calc(1rem + 2 * var(--border-m));    
+}
+
+
+.inverse {
+    color: var(--color-neutral-light)
+}
+
+.color-light {
+    color: var(--color-neutral-background)
+}
+
+/* Second block */
+
+/* Header */
+
+.chart-container {
+    margin: var(--blockmargin) var(--blockmargin);
+}
+
+/* Bars & labels */
+
+.barchart {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0.5rem, 1fr)); 
+    grid-column-gap: 0.75rem;
+    align-items:flex-end; 
+    min-height: 25vh;
+}
+
+.amount {
+    display: none;
+    border-radius: var(--border-radius-bars);
+    background-color: var(--color-neutral-dark);
+    color: var(--color-neutral-light);
+    font-size: var(--fontsize-xs); 
+    margin-bottom: 0.5rem;
+    padding: 0.25rem; 
+}
+
+.bar {    
+    background-color: var(--color-brand);
+    border-radius: var(--border-radius-bars);
+    margin-bottom: 0.5rem;
+  }
+
+.bar:hover{
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+#mon .bar {
+    height: calc(var(--barheight) * 0.1745);
+}
+
+#tue .bar {
+    height: calc(var(--barheight) * 0.3491);
+}
+
+#wed .bar {
+    height: calc(var(--barheight) * 0.5236);
+    background-color: var(--color-variant);
+}
+
+#thu .bar {
+    height: calc(var(--barheight) * 0.3107);
+}
+
+#fri .bar {
+    height: calc(var(--barheight) * 0.2339);
+}
+
+#sat .bar {
+    height: calc(var(--barheight) * 0.4328);
+}
+
+#sun .bar {
+    height: calc(var(--barheight) * 0.2528);
+}
+
+.label {
+    color: var(--color-neutral-medium);
+    font-size: var(--fontsize-xs);
+    margin: auto;
+    text-align: center;
+}
+
+
+/* Montly total */
+
+.total-container {
+    display: flex;
+    align-items:flex-end;
+    margin: var(--blockmargin) var(--blockmargin) calc(var(--blockmargin) * 1.5) var(--blockmargin);   
+}
+
+.total {
+    flex: 50%;
+}
+
+.total h1, 
+.total h4 {
+    position: static;
+}
+
+/* Difference from last month */
+.difference {
+    flex: 50%;
+    text-align: right;
+}
+
+.difference h4, 
+.difference h5 {
+    position: static;
+}
+
+.total h4,
+.difference h4 {
+    color: var(--color-neutral-medium);
+    font-weight: var(--fontweight-s);
+    font-size: var(--fontsize-s);
+}
+
+/*
+@media screen and (min-width: 1440px) {
+    body {
+        margin: auto;
+        width: 40%;
+    }
+}
+*/
+
+/*
+@media screen and (max-width: 375px) {
+    .amount {
+      margin-left: -0.4rem;
+    }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+  

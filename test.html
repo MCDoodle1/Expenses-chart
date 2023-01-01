@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <style>
+    .bar1 {
+        background-color: lime;
+        width: 150px;
+        height: 150px;
+      }
+
+      .amount1 {
+        display: none;
+        background-color: salmon;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="bar1">
+      Container content
+      <div class="amount1">Hidden div content</div>
+    </div>
+
+    <script>
+        const bar = document.getElementsByClassName('bar1')[0];
+
+        const amount = document.getElementsByClassName('amount1')[0];
+
+        // ✅ Show hidden DIV on hover
+        bar.addEventListener('mouseover', handleMouseOver => {
+            amount.style.display = 'block';
+        }); 
+
+        bar.addEventListener('mouseout', handleMouseOut => {
+            amount.style.display = 'none';
+        }); 
+
+
+
+
+    </script>
+  </body>
+</html>
