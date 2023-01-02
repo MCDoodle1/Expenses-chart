@@ -89,13 +89,13 @@ hr {
     height: 0.25vh;
     background-color: var(--color-neutral-background);
     border: none;
-    margin: 1.5rem 0.75rem 0.75rem 0.75rem;
+    margin: 1vh;
 }
 
 .top-block {
     display: flex;
     width: 90%;
-    height: 10vh;
+    min-height: 12vh;
     margin: 10vh auto 3vh;
     border-radius: var(--border-radius);
     background-color: var(--color-brand);
@@ -121,7 +121,7 @@ hr {
 
 .balance-container h2, h4 {
     position: relative;
-    left: 1rem;     
+    left: 1vw;     
 }
 
 .balance-container h4 {
@@ -130,8 +130,7 @@ hr {
 
 .circles-container {
     display: flex;
-    align-items: center;
-    margin: 1vh;
+    align-items: center;   
 }
 
 .logo {
@@ -145,7 +144,7 @@ hr {
     width: var(--circle-radius);
     height: var(--circle-radius);
     border-radius: var(--border-radius-circle); 
-    right: 1rem;
+    right: 3vw;
 }
 
 .ring {
@@ -182,7 +181,7 @@ hr {
     grid-template-columns: repeat(7, minmax(0.5rem, 1fr)); 
     grid-column-gap: 0.75rem;
     align-items:flex-end; 
-    min-height: 25vh;
+    min-height: 30vh;
 }
 
 .amount {
@@ -277,23 +276,6 @@ hr {
     font-weight: var(--fontweight-s);
     font-size: var(--fontsize-s);
 }
-
-/*
-@media screen and (min-width: 1440px) {
-    body {
-        margin: auto;
-        width: 40%;
-    }
-}
-*/
-
-/*
-@media screen and (max-width: 375px) {
-    .amount {
-      margin-left: -0.4rem;
-    }
-}
-*/
 
 
 
