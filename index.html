@@ -1,43 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Expenses chart component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 </head>
 <body>
-
-  My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <main>
+        <div class="top-block">
+            <div class="balance-container inverse">
+                <h4>My balance</h4>
+                <h2>$921.48</h2>
+            </div>
+            <div class="logo">
+                <div class="circles-container">
+                    <div class="circle">
+                        <div class="ring"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-block">
+            <div class="chart-container">
+                <h2>Spending - Last 7 days</h2>
+                <div class="barchart">
+                    <!-- Below code is being inserted by Javascript file "chart.js"
+                    <div class="weekday" id="mon">
+                        <div class="amount">$17.45</div>
+                        <div class="bar"></div>
+                        <div class="label">mon</div>
+                    </div>
+                    <div class="weekday" id="tue">
+                        <div class="amount"x>$34.91</div>
+                        <div class="bar"></div>
+                        <div class="label">tue</div>
+                    </div>
+                    <div class="weekday" id="wed">
+                        <div class="amount">$52.36</div>
+                        <div class="bar"></div>
+                        <div class="label">wed</div>
+                    </div>
+                    <div class="weekday" id="thu">
+                        <div class="amount">$31.07</div>
+                        <div class="bar"></div>
+                        <div class="label">thu</div>
+                    </div>
+                    <div class="weekday" id="fri">
+                        <div class="amount">$23.39</div>
+                        <div class="bar"></div>
+                        <div class="label">fri</div>
+                    </div>
+                    <div class="weekday" id="sat">
+                        <div class="amount">$43.28</div>
+                        <div class="bar"></div>
+                        <div class="label">sat</div>
+                    </div>
+                    <div class="weekday" id="sun">
+                        <div class="amount">$25.48</div>
+                        <div class="bar"></div>
+                        <div class="label">sun</div>
+                    </div>
+                -->
+                </div>
+            </div>
+            <hr>
+            <div class="total-container">
+                <div class="total">
+                    <h4>Total this month</h4>
+                    <h1>$478.33</h1>
+                </div>
+                <div class="difference">
+                    <h5>+2.4%</h5>
+                    <h4>from last month</h4>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </main>
+    <div class="attribution">
+        <br>
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by Marco Clarijs.
+      </div>
 </body>
 </html>
